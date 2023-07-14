@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: orders
+    description: One record per customer
+    columns:
+      - name: o_orderkey
+        description: Primary key
+        tests:
+          - unique
+          - not_null

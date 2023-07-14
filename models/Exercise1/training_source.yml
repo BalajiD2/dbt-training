@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+    - name: snowflake_sample_data
+      description: This is a replica of the Postgres database used by our app
+      database: snowflake_sample_data
+      schema: tpch_sf1
+      tables:
+          - name: customer
+            description: One record per customer.
+          - name: lineitem
+            description: Status and price details for each line number.
+          - name: nation
+            description: One record per nation.
+          - name: orders
+            description: About order details.
+          - name: part
+            description: About part type and part name.
+          - name: partsupp
+            description: Inventory stocks of the parts.
+          - name: region
+            description: Region details.
+          - name: supplier
+            description: Supplier details.
