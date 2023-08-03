@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: snowflake
+    database: snowflake_sample_data
+    schema: tpch_sf1
+    tables:
+      - name: customer
+        description: this table contains customer details
+        columns:
+          - name: c_custkey
+            tests:
+              - relationships:
+                  field: c_custkey
+                  to: ref('orders')
